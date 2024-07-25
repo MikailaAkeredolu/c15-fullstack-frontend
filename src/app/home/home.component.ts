@@ -28,6 +28,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  deleteHome(id: any){
+      this.homeService.deleteHomeById(id).subscribe(
+        (data)=>{
+          this.fetchHomes(); // re- fetch all my data
+          this.router.navigate(['homes']);
+        },
+        error => console.log(error)
+      );
+  }
+
 
 
   gotToAddHome(){

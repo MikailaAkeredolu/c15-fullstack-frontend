@@ -25,5 +25,9 @@ export class HomeService {
     return this.httpClient.get<Home>(`${this.baseEndpoint}/${id}`)
   }
 
+  deleteHomeById(id: any){
+    return this.httpClient.delete<Home>(`${this.baseEndpoint}/${id}`)
+  }
+
   
 }
