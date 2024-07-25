@@ -8,13 +8,15 @@ import { AddHomeComponent } from './add-home/add-home.component';
 import { UpdateHomeComponent } from './update-home/update-home.component';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { HomeDetailComponent } from './home-detail/home-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddHomeComponent,
-    UpdateHomeComponent
+    UpdateHomeComponent,
+    HomeDetailComponent
   ],
   imports: [
     BrowserModule,

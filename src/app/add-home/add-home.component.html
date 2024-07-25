@@ -1,1 +1,82 @@
-<p>add-home works!</p>
+<div class="container" style="width: 50%; padding: 40px;">
+   <h1 style="text-align: center;">Add Listing Form</h1>
+
+
+   <form (ngSubmit)=" submitHomeButton()">
+
+      <div class=" form-group mb-3">
+        <label for="photo">Photo</label>
+        <input type="text" id="photo" class="form-control" placeholder="add url for photo"
+
+        [(ngModel)]="home.photo" name="photo"
+        >
+      </div>
+
+
+      <div class=" form-group mb-3">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="add the name"
+        required
+        [(ngModel)]="home.name" name="name"
+        >
+      </div>
+
+      <div class=" form-group mb-3">
+        <label for="city">City</label>
+        <input type="text" id="city" class="form-control" 
+        [(ngModel)]="home.city" name="city"
+        >
+      </div>
+
+      <div class=" form-group mb-3">
+        <label for="state">State</label>
+        <input type="text" id="state" class="form-control" 
+        [(ngModel)]="home.state" name="state"
+        >
+      </div>
+
+
+      <div class="row">
+
+                <div class=" form-group col-sm-4">
+                    <label for="availableUnits">Units</label>
+                    <input type="number" id="availableUnits" class="form-control" 
+                    [(ngModel)]="home.availableUnits" name="availableUnits"
+                    >
+                </div>
+
+                <div class=" form-group col-sm-4">
+                    <label for="wifi">Wifi</label>
+                        <select [(ngModel)]="home.wifi" class="form-control" name="wifi" id="wifi">
+                                <option selected disabled value="">choose... </option>
+                                <option>True</option>
+                                <option>False</option>
+                        </select>
+                </div>
+
+                <div class=" form-group col-sm-4">
+                    <label for="laundry">Laundry</label>
+                        <select [(ngModel)]="home.laundry" class="form-control" name="laundry" id="laundry">
+                                <option selected disabled value="">select... </option>
+                                <option>True</option>
+                                <option>False</option>
+                        </select>
+                </div>
+
+
+
+      </div>
+     
+
+<br>
+
+
+    
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-danger" (click)="goToHome()">Cancel</button>
+
+  </form>
+
+
+ 
+</div>

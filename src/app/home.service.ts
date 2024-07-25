@@ -17,6 +17,13 @@ export class HomeService {
     return this.httpClient.get<Home[]>(`${this.baseEndpoint}`);
   }
 
+  addHome(home:Home){
+    return this.httpClient.post<Home>(`${this.baseEndpoint}`, home);
+  }
+
+  getHomeById(id: number): Observable<Home>{
+    return this.httpClient.get<Home>(`${this.baseEndpoint}/${id}`)
+  }
 
   
 }

@@ -8,7 +8,7 @@
         </div>
 
         <div class="col mt-5">
-            <button class="btn btn-success"  style="margin-left: 150px;" type="button" (click)="gotToAddHome()">Add House</button>
+            <button class="btn btn-success"  style="margin-left: 150px;" type="button" (click)="gotToAddHome()">Add Home</button>
         </div>
 
         <div *ngFor="let home of homes">
@@ -17,8 +17,10 @@
                         <img [src]="home.photo" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title">{{home.name}}</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">{{home.city}}</p>
+                        
+                        <button class="btn btn-warning" (click)="goToViewDetails(home.id)">View Details</button>
+
                         </div>
                     </div>
 
